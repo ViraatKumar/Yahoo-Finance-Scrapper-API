@@ -12,10 +12,11 @@ const scheduleJobs = (currency1, currency2) => {
 
   console.log("Scheduling jobs...");
   // An example schedule that runs every 1 minute to just show that the schedulesa are working
+  // uncomment it if you want to see it work, didnt enable since i am getting a free hosting service
 
-  cron.schedule("* * * * *", async () =>
-    scrapeDataAndSave(currency1, currency2, "1W")
-  );
+  // cron.schedule("* * * * *", async () =>
+  //   scrapeDataAndSave(currency1, currency2, "1W")
+  // );
 
   cron.schedule("0 0 * * 1", async () =>
     scrapeDataAndSave(currency1, currency2, "1W")
