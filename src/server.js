@@ -9,6 +9,14 @@ app.use(express.json());
 app.use("/api", router);
 // Setting up swagger docs
 setupSwaggerDocs(app);
+// just a default response for empty requests, can remove it
+router.get("/", (req, res) => {
+  res.send({
+    message:
+      "hello welcome to my API, kindly use the following link to view the example results",
+    link: "https://yahoo-finance-scrapper-api.onrender.com/api/forex-data?fromCurrency=USD&toCurrency=INR&period=10M",
+  });
+});
 app.listen(PORT, () => {
   // Scheduling jobs as server starts
   scheduleJobs("GBP", "INR");
