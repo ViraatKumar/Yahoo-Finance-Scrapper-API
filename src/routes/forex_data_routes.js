@@ -40,5 +40,6 @@ router.get("/", (req, res) => {
     message: "hello welcome to my API",
   });
 });
+router.get("/forex-data", forexData); // so that the data comes for the browser as well
 router.post("/forex-data", forexData);
 export default router;
