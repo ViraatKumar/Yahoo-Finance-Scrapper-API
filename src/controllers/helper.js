@@ -13,7 +13,6 @@ const extractPeriod = (period) => {
   let time = period[period.length - 1];
   const startDate = new Date();
   const endDate = new Date();
-  console.log(endDate);
   switch (time) {
     case "Y":
     case "y":

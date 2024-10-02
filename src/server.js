@@ -10,6 +10,7 @@ app.use("/api", router);
 // Setting up swagger docs
 setupSwaggerDocs(app);
 // just a default response for empty requests, can remove it
+
 app.get("/", (req, res) => {
   res.send({
     message:

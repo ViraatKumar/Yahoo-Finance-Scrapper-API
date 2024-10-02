@@ -18,7 +18,6 @@ const saveToSQL = (data) => {
       insertData.run(row.date.toISOString().split("T")[0], row.open, row.close);
     });
     insertData.finalize();
-    console.log("Data Saved");
   });
 };
 

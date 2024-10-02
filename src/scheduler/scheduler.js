@@ -1,16 +1,6 @@
 import cron from "node-cron";
 import scrapeDataAndSave from "../controllers/helper.js";
 const scheduleJobs = (currency1, currency2) => {
-  /*
-  @swagger
-    Jobs are scheduled as such
-        Every week, get past weeks data,
-        Every Month, get past months data,
-        and so on
-    This was my understanding from the task and hence did it so
-  */
-
-  console.log("Scheduling jobs...");
   // An example schedule that runs every 1 minute to just show that the schedulesa are working
   // uncomment it if you want to see it work, didnt enable since i am getting a free hosting service
 
@@ -37,7 +27,5 @@ const scheduleJobs = (currency1, currency2) => {
   cron.schedule("0 0 1 1 *", () =>
     scrapeDataAndSave(currency1, currency2, "1Y")
   );
-
-  console.log("Jobs have been scheduled.");
 };
 export default scheduleJobs;
