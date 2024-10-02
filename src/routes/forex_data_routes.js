@@ -35,6 +35,10 @@ const router = express.Router();
  *       404:
  *         description: Not Found.
  */
-
+router.get("/", (req, res) => {
+  res.send({
+    message: "hello welcome to my API",
+  });
+});
 router.post("/forex-data", forexData);
 export default router;
